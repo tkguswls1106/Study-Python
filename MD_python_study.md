@@ -2,6 +2,8 @@
 
 **Python 도장깨기 강의 영상 사이트: https://www.youtube.com/watch?v=Pe4bDHvNQ98&list=PLa9dKeCAyr7iWPMclcDxbnlTjQ2vjdIDD&index=1**
 ```
+<#는 출력값을 적어둠>
+
 명령 프롬프트(cmd)를 들어가서
 python 을 치면 파이썬 셸을 이용하여 파이썬을 사용할 수 있음.
 명령 프롬프트에서 파이썬 셸을 끝내려면 exit()과 엔터를 입력하거나 Ctrl+Z와 엔타를 입력하면 된다.
@@ -41,5 +43,42 @@ input(): c언어의 scanf와 같은 용도인 입력 함수이다.
 문자열 2가지를 입력하는 방법은 예를 들어
 a, b = input('문자열 2개를 스페이스바로 구분하여 입력하세요: ').split()
 만약 공백이 아닌, 콤마(,)로 구분하고싶다면 split(',')으로 변경하여 사용하면 된다.
+
+print(1, 2, 3)  #1 2 3
+print('hello', 'world')  #hello world
+print(1, 2, 3, sep = ', ')  #1, 2, 3
+print(1, 2, 3, sep = '\n')  #1엔터2엔터3
+print('1\n2\n3')  #1엔터2엔터3
+print(1, end=''); print(2, end=''); print(3)  #123
+
+\ 문자 자체를 출력할때에는 \\ 이렇게 \를 두번 써야 한다.
+
+1 == 1.0  #True
+1 != 1.0  #False
+1 is 1.0  #False
+1 is not 1.0  #True
+단, is와 is not 은 객체 비교이기때문에 값을 비교할때는 사용하면 안된다. 결과값이 잘못 나올수있음.
+
+식 하나에 and, or, not 논리연산자가 모두 들어있으면, not, and, or 순으로 판단함.
+not True and False or not False  #True
+위는 ((not True) and False) or (not False) 이렇게와 같다.
+
+bool(1)  #True
+bool(0)  #False
+bool(1.5)  #True
+bool(0.0)  #False
+bool(False)  #False
+bool('False')  #True
+bool(' ')  #True
+bool('')  #False
+
+파이썬에서는 논리연산자 할때 단락 평가(앞이 맞으면 뒤 값을 보지도않음)에 따라 반환값이 결정된다.
+첫번째 값까지만 봐도 된다면 첫번째 값을 반환하고, 두번째 값까지 판단해야한다면 두번째 값이 반환된다. 이게 바로 단락 평가이다.
+True and 'abc'  #'abc'
+'abc' and True  #True
+True or 'abc'  #True
+'abc' or True  #'abc'
+False and 'abc'  #False
+0 and 'abc'  #0  0은 False이므로 and 연산자는 두번째 값을 평가하지 않음.
 
 ```
