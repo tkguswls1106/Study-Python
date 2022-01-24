@@ -149,12 +149,30 @@ tuple(a) 를 출력하면 (1, 2, 3)으로 출력된다.
 예를들어 a= (1, 2, 3) 를 적고
 list(a) 를 출력하면 [1, 2, 3]으로 출력된다.
 
+a = [10, 20, 30]
+30 in a 입력하면 True 출력됨. 같은 말은 30 in [10, 20, 30]
+30 not in a 입력하면 False 출력됨.
+위의 것들은 리스트 뿐만 아니라 튜플에도 적용됨.
+
+list(range(0, 10)) + list(range(10, 20))
+위는 퓨플(tuple)도 가능.
+이처럼 리스트나 튜플안에 range 넣어서 연결은 되는데, range만 써서 둘이 더해서 연결하는건 에러남.
+
+list(range(0, 5, 2)) * 3
+위는 퓨플(tuple)도 가능.
+하지만 range만 쓰게될 경우 여러번 출력하는 *(곱셈) 사용도 안된다.
+
+a = [0, 1, 2] 적고
+len(a) 출력하면 3이 출력된다.
+
 ============================
 
+1 in range(10)  #True
+'P' in 'Hello Python'  #True
+
+hello1 = 'hi, shj'
+hello2 = '안녕하세요'
+len(hello1)  #7
+len(hello2)  #5
+
 ```
-
-파이썬 도장깨기 26.6강까지 보고,
-https://www.inflearn.com/course/django-course#curriculum
-이 강의 결제해서 보기
-
-python 도장깨기 강의 10.2강까지 완료. 관련 필기 내용 작성.
