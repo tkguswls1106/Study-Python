@@ -278,7 +278,9 @@ lux['hello'] = 3000  이렇게 키와 값 추가가 가능하다.
 if 조건식:
 	코드
 예를들어
+x = int(input())
 if(x == 10):
-	print('10입니다.')
+	print('x는 10입니다.')
+print('hello')
 
 ```
