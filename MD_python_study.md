@@ -281,6 +281,6 @@ if 조건식:
 x = int(input())
 if(x == 10):
 	print('x는 10입니다.')
-print('hello')
+print('hello python')
 
 ```
