@@ -311,4 +311,59 @@ elif:
 else:
 순서이다.
 
+for 변수 in range(횟수):
+	반복할 코드
+
+for i in range(5):
+	print('helllo world', i)
+# helllo world 0
+helllo world 1
+helllo world 2
+helllo world 3
+helllo world 4
+
+for i in range(5, 12):
+이거는 5부터 11까지 반복하는 for문이다.
+5~11까지 (11-5+1=7번 반복한다)
+
+for i in range(0, 10, 2)  이건 0부터 10전까지(9까지) 2씩 증가한 숫자중에서 반복한다. 즉 0부터 짝수만.
+
+for에 range대신 시퀀스 객체를 넣어도 됨.
+예를들어 
+a = [10, 20, 30]
+for i in a:
+	print(i)
+# 10
+20
+30
+
+문자열도 시퀀스 객체이므로
+munjayul = ('abc', 'def', 'ghi')
+for str in munjayul:  // 'munjayul 안에서 str을 위한' 이라고 이해해보자
+사용가능하다.
+
+for letter in 'Python':
+	print(letter, end = ' ')
+# P y t h o n
+근데 이걸 for letter in reversed('Python'): 이렇게 쓰면  #n o h t y P
+
+i = 0
+while i<5:
+        print('Hello world')
+        i+=1
+# Hello world
+Hello world
+Hello world
+Hello world
+Hello world
+참고로 파이썬에서는 i++은 못쓰는듯 하다.
+
+from random import *
+print(randint(1, 6))
+이거와
+import random
+print(random.randint(1, 6)
+이거는 같다.
+1~6 숫자중 랜덤숫자 추출한다.
+
 ```
