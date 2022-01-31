@@ -1,0 +1,8 @@
+count = int(input('반복횟수 입력: '))
+print('홀수 출력 시작:')
+# for in range 이므로 이미 i=0이라는 뜻이 포함되어있어, i=0같은 선언이 필요없다.
+for i in range(count + 1):  #0부터 count까지(count+1전의 숫자까지)
+        if i%2 == 0:
+            continue
+        print(i)
+print('홀수 출력 끝!')
