@@ -313,6 +313,7 @@ else:
 
 for 변수 in range(횟수):
 	반복할 코드
+이건 0 횟수전의 숫자까지 반복한다.
 
 for i in range(5):
 	print('helllo world', i)
@@ -323,7 +324,7 @@ helllo world 3
 helllo world 4
 
 for i in range(5, 12):
-이거는 5부터 11까지 반복하는 for문이다.
+이거는 5부터 11(12전)까지 반복하는 for문이다.
 5~11까지 (11-5+1=7번 반복한다)
 
 for i in range(0, 10, 2)  이건 0부터 10전까지(9까지) 2씩 증가한 숫자중에서 반복한다. 즉 0부터 짝수만.
@@ -365,5 +366,23 @@ import random
 print(random.randint(1, 6)
 이거는 같다.
 1~6 숫자중 랜덤숫자 추출한다.
+
+while:
+	print(i)
+	i+=1
+	if(조건)
+	break
+이것과
+for i in  range(숫자):
+	print(i)
+	if(조건)
+	break
+이것은 차이점이 있다.
+바로 i가 어디까지 출력되냐이다.
+그 이유는 만약에 조건문에 i==10이라고 가정하고,
+위 두 코드들 모두 조건을 충족시킨 상태라 하면,
+위의 while문은 9까지 출력되다가 바로 while문을 탈출하는 반면에,
+위의 for문은 range 때문에 9출력하고 조건문 충족하지 못했기때문에 다시 올라가서 10을 출력하고 그다음에 조건문을 충족해서 for문을 탈출한다.
+즉, 위의 while문은 9까지, 위의 for문은 10까지 출력된다.
 
 ```
