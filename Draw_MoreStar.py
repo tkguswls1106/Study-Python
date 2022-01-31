@@ -1,6 +1,6 @@
 k = 2
-for i in range(0,5):
-        for i in range(0,k):
+for i in range(0,5):  #5줄
+        for i in range(0,k):  #별을 k개수만큼
                 print('*', end = '')
         k+=1
         print('\n')
