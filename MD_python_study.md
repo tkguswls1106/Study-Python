@@ -402,4 +402,14 @@ print문은 파이썬에선 기본적으로 엔터기능이 탑재되어있음.
 FizzBuzz 짧게 단축한 프린트출력문장
 print('Fizz' * (i%3==0) + 'Buzz' * (i%5==0) or i)
 
+터틀 그래픽스
+import turltle as t  // 터틀 그래픽스 코드를 t로 치환한다.
+t.shape('turtle')  // t의 모양을 거북이 모양으로 지정한다.
+t.forward(100)  // 거북이를 앞으로 100만큼 전진한다.
+
+t.begin_fill()  // 색칠할 영역 시작
+t.end_fill()  // 색칠할 영역 끝
+t.circle(120)  // 반지름이 120인 원 그리기
+t.speed('fastest')  // 거북이 속도를 가장 빠르게 설정
+
 ```
