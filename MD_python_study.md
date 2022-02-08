@@ -537,4 +537,22 @@ while i < len(a):
 	print()
 	i += 1
 
+문자열 왼쪽 정렬
+print('python'.ljust(10))  #'python    '  // 실제론 따옴표(' ')가 출력되진 않음. 내가 구분하기쉽게 적어둔것일뿐임.
+문자열 오른쪽 정렬
+print('python'.rjust(10))  #'    python'  // 실제론 따옴표(' ')가 출력되진 않음. 내가 구분하기쉽게 적어둔것일뿐임.
+문자열 가운데 정렬
+print('python'.center(10))  #'  python  '  // 실제론 따옴표(' ')가 출력되진 않음. 내가 구분하기쉽게 적어둔것일뿐임.
+
+메서드 체이닝: 메서드를 줄줄이 연결해서 사용
+다음은 문자열을 오른쪽으로 정렬한 뒤 대문자로 바꿈
+print('python'.rjust(10).upper())  #'    PYTHON'  //// 실제론 따옴표(' ')가 출력되진 않음. 내가 구분하기쉽게 적어둔것일뿐임.
+
+왼쪽부터 문자열 위치 찾기
+print('apple pineapple'.find('pl'))  #2  // 'pl'이 시작되는 첫 인덱스 번호인 2를 출력함.
+print('apple pineapple'.find('xy'))  #-1  // 찾는 문자열이 없으므로 -1을 출력함.
+오른쪽부터 문자열 위치 찾기
+print('apple pineapple'.rfind('pl'))  #12  // 오른쪽에서 'pl'이 시작되는 첫 인덱스 번호인 12를 출력함.
+print('apple pineapple'.rfind('xy'))  #-1  // 찾는 문자열이 없으므로 -1을 출력함.
+
 ```
