@@ -268,8 +268,15 @@ len({'health': 800, 'mana': 334, 'armor': 18.72})  #3
 lux['health']  #800
 lux[800]  #에러난다
 lux[없는 키]  #에러난다
-lux['health'] = 200  이렇게 값 변경가능하다.
-lux['hello'] = 3000  이렇게 키와 값 추가가 가능하다.
+lux['health'] = 200  이렇게 값 변경가능하다. (해당 키에 맞는 값을 수정)
+lux['hello'] = 3000  이렇게 키와 값 추가가 가능하다. (키와 값을 새로 추가)
+lux.setdefault('world')  // 'world' 키를 새로 추가해주고, 값에 빈값인 none을 추가해준다. (키와 빈값 추가)
+lux  #{'health': 200, 'mana': 334, 'armor': 18.72, 'hello': 3000, 'world': None}
+lux.setdefault('shj', 23)  // 키로 'shj'와 값으로 23을 새로 추가해준다. (키와 값을 새로 추가)
+lux  #{'health': 200, 'mana': 334, 'armor': 18.72, 'hello': 3000, 'world': None, 'shj': 23}
+lux.update(shj=100)  // 'shj' 키의 값을 100으로 변경한다. (해당 키에 맞는 값을 수정)
+		 // 그리고 예를들어 x.update(a=900, b=200) 이렇게 여러개도 함께 변경이 가능하다.
+lux  #{'health': 200, 'mana': 334, 'armor': 18.72, 'hello': 3000, 'world': None, 'shj': 100}
 'health' in lux  #True
 'world' not in lux  #True
 
