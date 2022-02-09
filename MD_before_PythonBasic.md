@@ -102,7 +102,7 @@ print("나는 {age}살이며, {color}색을 좋아해요.".format(color = "파�
 
 age = 22
 color = "파란"
-print(f"나는 {age}살이며, {color}색을 좋아해요.")  #나는 22살이며, 파란색을 좋아해요.
+print(f"나는 {age}살이며, {color}색을 좋아해요.")  #나는 22살이며, 파란색을 좋아해요.  // f는 포맷팅(formatting) 약자이다.
 
 \n은 문장내에서 출력할때 엔터를 쳐준다.
 
