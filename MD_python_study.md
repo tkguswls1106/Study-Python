@@ -536,7 +536,7 @@ while i < len(a):
 		j += 1
 	print()
 	i += 1
-
+ 
 문자열 왼쪽 정렬
 print('python'.ljust(10))  #'python    '  // 실제론 따옴표(' ')가 출력되진 않음. 내가 구분하기쉽게 적어둔것일뿐임.
 문자열 오른쪽 정렬
@@ -554,5 +554,9 @@ print('apple pineapple'.find('xy'))  #-1  // 찾는 문자열이 없으므로 -1
 오른쪽부터 문자열 위치 찾기
 print('apple pineapple'.rfind('pl'))  #12  // 오른쪽에서 'pl'이 시작되는 첫 인덱스 번호인 12를 출력함.
 print('apple pineapple'.rfind('xy'))  #-1  // 찾는 문자열이 없으므로 -1을 출력함.
+
+'Hello my name is %s, and %d years old' %('shj', 23)  #'Hello my name is shj, and 23 years old'
+
+format 메서드 사용해서 출력하는 방법은 이전 기초 파이썬 필기 파일에서 확인 할 수 있다.
 
 ```
