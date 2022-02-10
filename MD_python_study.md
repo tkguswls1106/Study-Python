@@ -265,7 +265,7 @@ lux = dict({'health': 800, 'mana': 334, 'armor': 18.7})
 lux = {'health': 800, 'mana': 334, 'armor': 18.72}   키:값
 len(lux)  #3
 len({'health': 800, 'mana': 334, 'armor': 18.72})  #3
-lux['health']  #800
+lux['health']  #800  // 이런 특정 키를 입력하여 값을 출력하는 코드는 lux.get('health')와 같다.
 lux[800]  #에러난다
 lux[없는 키]  #에러난다
 lux['health'] = 200  이렇게 값 변경가능하다. (해당 키에 맞는 값을 수정)
@@ -277,8 +277,14 @@ lux  #{'health': 200, 'mana': 334, 'armor': 18.72, 'hello': 3000, 'world': None,
 lux.update(shj=100)  // 'shj' 키의 값을 100으로 변경한다. (해당 키에 맞는 값을 수정)
 		 // 그리고 예를들어 x.update(a=900, b=200) 이렇게 여러개도 함께 변경이 가능하다.
 lux  #{'health': 200, 'mana': 334, 'armor': 18.72, 'hello': 3000, 'world': None, 'shj': 100}
+lux.update({'health': 600, 'hey':'3400'})
+lux  #{'health': 600, 'mana': 334, 'armor': 18.72, 'hello': 3000, 'world': None, 'shj': 100, 'hey': '3400'} (있는 키는 값만 변경, 없는 키는 새로 키와 값 생성.)
+lux.pop('shj')  // 'shj'가 키인 키-값을 제거 (특정 키-값 쌍을 제거), 같은 말로는 del lux['shj']가 있다.
+lux  #{'health': 600, 'mana': 334, 'armor': 18.72, 'hello': 3000, 'world': None, 'hey': '3400'}
 'health' in lux  #True
-'world' not in lux  #True
+'kakao' not in lux  #True
+lux.clear()  // lux 딕셔너리의 모든 키-값 쌍을 삭제함.
+lux  #{}
 
 ============================
 
