@@ -572,4 +572,13 @@ print('apple pineapple'.rfind('xy'))  #-1  // 찾는 문자열이 없으므로 -
 
 format 메서드 사용해서 출력하는 방법은 이전 기초 파이썬 필기 파일에서 확인 할 수 있다.
 
+x = {'a':10, 'b':20, 'c':30}
+x.items()  #dict_items([('a', 10), ('b', 20), ('c', 30)])  // 키와 값 모두 출력
+x.keys()  #dict_keys(['a', 'b', 'c'])  // 키만 모두 출력
+x.values()  #dict_values([10, 20, 30])  // 값만 모두 출력
+여기서 반복문으로 딕셔너리의 키-값 쌍을 모두 출력하는 코드는
+for key, value in x.items():
+	print(key, value, end='  ')
+# a 10  b 20  c 30
+
 ```
