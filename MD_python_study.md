@@ -413,6 +413,19 @@ for i in  range(숫자):
 위의 for문은 range 때문에 9출력하고 조건문 충족하지 못했기때문에 다시 올라가서 10을 출력하고 그다음에 조건문을 충족해서 for문을 탈출한다.
 즉, 위의 while문은 9까지, 위의 for문은 10까지 출력된다.
 
+topics = [
+    {'id':1, 'title':'routing', 'body':'Routing is ..'},
+    {'id':2, 'title':'view', 'body':'View is ..'},
+    {'id':3, 'title':'Model', 'body':'Model is ..'},
+]
+def index(request):
+    global topics
+    ol = ''
+    for topic in topics:
+        ol += f'<li>{topic["title"]}</li>'  // f는 파이썬의 f-string 이라는 문자열 포매팅 방법인데, 더 자세한 내용은 https://blockdmask.tistory.com/429 에 있다.
+				// 요약하자면, 반복문등등에서 중간에 짧은거 하나만 바꾸면되는데 다른것도 바꿔주느라 코드가 무지 길어지는것을
+				// 방지하기위해 f{}를 사용하여 {} 안의 값만 변경하게해주는 문자열 포매팅 방법이다.
+
 if문의 조건식을 만족한다면, if문 안의 continue 코드줄 바로 아래에있는 코드는 실행하지않고,
 건너뛰어서 다시 if문을 감싸고있는 for문으로 돌아간다.
 
