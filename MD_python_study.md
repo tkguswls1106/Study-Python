@@ -127,7 +127,7 @@ a = 38, 24, 67
 
 튜플도 리스트처럼 여러 자료형을 섞어서 저장해도됨.
 
-a = list(range(10))
+a = tuple(range(10))
 a를 출력하면 (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 a = tuple(range(3, 10))
@@ -155,11 +155,11 @@ a = [10, 20, 30]
 위의 것들은 리스트 뿐만 아니라 튜플에도 적용됨.
 
 list(range(0, 10)) + list(range(10, 20))
-위는 퓨플(tuple)도 가능.
+위는 튜플(tuple)도 가능.
 이처럼 리스트나 튜플안에 range 넣어서 연결은 되는데, range만 써서 둘이 더해서 연결하는건 에러남.
 
 list(range(0, 5, 2)) * 3
-위는 퓨플(tuple)도 가능.
+위는 튜플(tuple)도 가능.
 하지만 range만 쓰게될 경우 여러번 출력하는 *(곱셈) 사용도 안된다.
 
 a = [0, 1, 2] 적고
@@ -358,7 +358,7 @@ for i in range(5, 12):
 for i in range(0, 10, 2)  이건 0부터 10전까지(9까지) 2씩 증가한 숫자중에서 반복한다. 즉 0부터 짝수만.
 
 for에 range대신 시퀀스 객체를 넣어도 됨.
-예를들어 
+예를들어
 a = [10, 20, 30]
 for i in a:
 	print(i)
@@ -391,7 +391,7 @@ from random import *
 print(randint(1, 6))
 이거와
 import random
-print(random.randint(1, 6)
+print(random.randint(1, 6))
 이거는 같다.
 1~6 숫자중 랜덤숫자 추출한다.
 
@@ -626,7 +626,7 @@ a = set('apple')
 a  #{'e', 'l', 'a', 'p'}
 
 b = set(range(5))
-b  #{0, 1, 2, 3, 4, 5}
+b  #{0, 1, 2, 3, 4}
 
 c = set()
 c  #set()
@@ -635,7 +635,7 @@ c = {}
 type(c)  #<class 'dict'>
 
 c = set()
-type(c)  #<class 'dict'>
+type(c)  #<class 'set'>
 
 합집합 세트
 - 세트1 | 세트2
