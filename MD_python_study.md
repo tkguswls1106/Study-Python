@@ -621,6 +621,10 @@ print('apple pineapple'.find('xy'))  #-1  // 찾는 문자열이 없으므로 -1
 print('apple pineapple'.rfind('pl'))  #12  // 오른쪽에서 'pl'이 시작되는 첫 인덱스 번호인 12를 출력함.
 print('apple pineapple'.rfind('xy'))  #-1  // 찾는 문자열이 없으므로 -1을 출력함.
 
+a = "qwer"
+print(a.find('w'))  # 1
+print(a.find('w', 2))  # -1  // find('문자', 검색시작위치인덱스) 로 인덱스 2부터 'w'를 검색하였고, 없어서 -1을 출력함.
+
 'Hello my name is %s, and %d years old' %('shj', 23)  #'Hello my name is shj, and 23 years old'
 
 format 메서드 사용해서 출력하는 방법은 이전 기초 파이썬 필기 파일에서 확인 할 수 있다.
@@ -633,6 +637,14 @@ x.values()  #dict_values([10, 20, 30])  // 값만 모두 출력
 for key, value in x.items():
 	print(key, value, end='  ')
 # a 10  b 20  c 30
+만약 키만 출력하고 싶다면
+for i in x.keys():
+	print(i, end=' ')
+# a b c
+만약 값만 출력하고 싶다면
+for i in x.values():
+	print(i, end=' ')
+# 10 20 30
 
 세트는 수학에서의 집합과 같다.
 세트 = {값1, 값2, 값3}
@@ -719,5 +731,65 @@ a.clear()  // 요소 모두 삭제
 함수 안에서 global을 붙여도 되고, 함수 밖에서 global을 붙여도 된다.
 하지만 함수 밖에서 선언하였다면 함수 안에서도 사용을 명시해주어야 한다.
 쉽게 설명하자면, 각 함수마다 예를들어 global a 이렇게 모두 적어주어야한다.
+
+파이썬 라이브러리로 알파벳이나 숫자 목록이 담긴 리스트를 만들 수 있다.
+import string 
+// string.ascii_lowercase 는, 소문자 abcdefghijklmnopqrstuvwxyz
+// string.ascii_uppercase 는, 대문자 ABCDEFGHIJKLMNOPQRSTUVWXYZ
+// string.ascii_letters 는, 대소문자 모두 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+// string.digits 는, 숫자 0123456789
+쓰임예시로는
+lo_arr = list(string.ascii_lowercase)
+up_arr = list(string.ascii_uppercase)
+al_arr = list(string.ascii_letters)
+nu_arr = list(string.digits)
+print(lo_arr)
+# ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+alphabet = list(range(97, 123))  // 아스키코드 문자 a~z 까지를 십진수로 나타내면 97~122 이다. 나중에 chr()로 변환해서 응용하면 된다.
+alphabet = list(range(65, 91))  // 아스키코드 문자 A~Z 까지를 십진수로 나타내면 65~90 이다. 나중에 chr()로 변환해서 응용하면 된다.
+
+문자열 = 문자열.lower()  // 문자열 소문자로 변환
+문자열 = 문자열.upper()  // 문자열 대문자로 변환
+
+문자열 뒤집기
+str = input().split()  // 123 입력 (문자열)
+str = a[::-1]  // str = 321 (문자열)
+str = int(str)  // str = 321 (정수형)
+
+a = input()
+dial = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
+for i in range (len(a)):
+        for j in dial:
+                if a[i] in j:  # a[i]==j 라고하면 틀리다.
+                        print(dial.index(j))  # j가 들어있는 dial의 인덱스값
+
+a = 'hello world'
+a.replace('hello','hi')  // 문자열 변경
+a  # hi world
+
+{ 백준 내코드에 반례가 있어(예를들어 aabcbb) 완벽한 코드는 아니지만, 중첩 for문과 if문 속에서 break와 continue의 사용법을 보기에 좋은 예시 }
+# 백준 파이썬 1316번
+n = int(input())
+cnt = 0
+result_cnt = 0
+for i in range (n):
+        a = input()
+        for j in range (len(a)):
+                        if a.count(a[j]) > 1:  # 중복된것이 있음
+                                if a.index(a[j])+1 < a.find(a[j],(a.index(a[j])+1)):  # 중복된것이 연속되지않음
+                                        break  # 안쪽 for문을 끝내고 바깥쪽 for문으로 이동함.
+                                               # 만약 break가 아니라 continue를 적었다면,
+                                               # 안쪽 for문을 마저 이어서하여 문자열 a의 다음 문자도 비교했을것이다.
+                                               # 어차피 한 문자라도 삑사리나면 그건 result_cnt = 0 으로 치고 다음 새롭게 입력받은 문자열로 넘어가야하는데
+                                               # continue를 써버리면 예를들어 abba 입력시 ab보고 끝냈을것을 남은 ba도 확인하게되어 result_cnt값에 여지를 주게 되는 것이다.
+                                else:  # 중복된 값이 연속된것임
+                                        cnt+=1
+                        else:  # 중복된것이 없음
+                                cnt+=1
+        if cnt>=1:
+                result_cnt+=1
+        cnt=0       
+print(result_cnt)
 
 ```
