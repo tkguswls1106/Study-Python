@@ -49,7 +49,7 @@ print(round(3.14)) 이거는 3.14를 반올림한 값을 출력하라는 의미�
 
 from math import *
 print(floor(4.99))  4.99 소수점 내림  #4
-printf(ceil(3.14))  3.14 소수점 올림  #4
+print(ceil(3.14))  3.14 소수점 올림  #4
 print(sqrt(16))  16의 제곱근  #4.0
 
 from random import *
