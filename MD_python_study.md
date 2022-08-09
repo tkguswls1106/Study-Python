@@ -790,7 +790,7 @@ for i in range (n):
         if cnt>=1:
                 result_cnt+=1
         cnt=0       
-print(result_cnt
+print(result_cnt)
 
 while ~ else 문은
 while문 매개변수의 조건식에 해당하는 동안,
