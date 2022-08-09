@@ -790,6 +790,19 @@ for i in range (n):
         if cnt>=1:
                 result_cnt+=1
         cnt=0       
-print(result_cnt)
+print(result_cnt
+
+while ~ else 문은
+while문 매개변수의 조건식에 해당하는 동안,
+끝날때까지 쭉 단한번도 break로 빠져나오지 못하고 실행만 끝까지 완료했을때
+while문을 모두 실행하고 else 문으로 넘어가 그것도 마찬가지로 실행해주는 것이다.
+예시 사이트: https://studymake.tistory.com/209
+
+for ~ else 문은
+for문이 실행되는 동안,
+끝날때까지 쭉 단한번도 break로 빠져나오지 못하고 실행만 끝까지 완료했을때
+for문을 모두 실행하고 else 문으로 넘어가 그것도 마찬가지로 실행해주는 것이다.
+else 문으로 넘어가 그걸 실행해주는 것이다.
+예시 사이트: https://cagongman.tistory.com/30
 
 ```
