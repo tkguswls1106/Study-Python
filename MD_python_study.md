@@ -814,4 +814,11 @@ result = "shj".join(arr)
 처럼 사용하면
 ABshjCDshjEFshjGH 라고 출력된다.
 
+arr = ['가나다','라마바','사아자']
+a = []
+for i in arr:
+    a.append(i*2)
+print(a)
+# 출력이 ['가나다가나다', '라마바라마바', '사아자사아자'] 이렇게 뜬다.
+
 ```
