@@ -808,17 +808,17 @@ for i in range (2,2) 처럼 범위가 이러한 경우일때는, 2~1 범위라�
 해당 for문 안의 코드가 실행되지 않는다.
 하지만 만약 저러한 for문의 범위에 for~else 구문을 사용할 경우에는 else 부분의 코드만 실행된다.
 
-join은 리스트를 문자열로 이어붙여서 저장할때 사용하며,
-arr = ['AB', 'CD', 'EF', 'GH']
-result = "shj".join(arr)
-처럼 사용하면
-ABshjCDshjEFshjGH 라고 출력된다.
-
 arr = ['가나다','라마바','사아자']
 a = []
 for i in arr:
     a.append(i*2)
 print(a)
 # 출력이 ['가나다가나다', '라마바라마바', '사아자사아자'] 이렇게 뜬다.
+
+join은 리스트를 문자열로 이어붙여서 저장할때 사용하며,
+arr = ['AB', 'CD', 'EF', 'GH']
+result = "shj".join(arr)
+처럼 사용하면
+ABshjCDshjEFshjGH 라고 출력된다.
 
 ```
