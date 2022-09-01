@@ -821,4 +821,7 @@ result = "shj".join(arr)
 처럼 사용하면
 ABshjCDshjEFshjGH 라고 출력된다.
 
+for i in range(123, 300):
+    temp = sum(map(int, str(i)))  # 문자열의 각 자리를 int로 바꾸어 sum값을 구함. 그리고 temp에 할당함.
+
 ```
