@@ -825,5 +825,7 @@ for i in range(123, 300):
     temp = sum(map(int, str(i)))  # 문자열의 각 자리를 int로 바꾸어 sum값을 구함. 그리고 temp에 할당함.
 
 sys.stdin.readline() 가 input() 보다 빠른 입력방법이다.
+그리고 sys.stdin.readline() 를 사용하려면 import sys 써야한다.
+input()과 sys.stdin.readline()의 차이점 설명: https://buyandpray.tistory.com/7
 
 ```
